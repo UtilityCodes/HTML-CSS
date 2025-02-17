@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Navigation Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            gap: 20px;
+            background: #333;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .nav-item {
+            position: relative;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .nav-item svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+        .nav-item:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        .tooltip {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #555;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 3l8 8h-5v8h-6v-8H4z"/></svg>
+            <span class="tooltip">Home</span>
+        </div>
+        <div class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 22c-4.418 0-8-3.582-8-8 0-2.278.938-4.35 2.443-5.855L12 2l5.557 6.145C19.062 9.65 20 11.722 20 14c0 4.418-3.582 8-8 8z"/></svg>
+            <span class="tooltip">Notifications</span>
+        </div>
+        <div class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2c2.761 0 5 2.239 5 5s-2.239 5-5 5-5-2.239-5-5 2.239-5 5-5zm0 11c-3.315 0-6 2.685-6 6v3h12v-3c0-3.315-2.685-6-6-6z"/></svg>
+            <span class="tooltip">Profile</span>
+        </div>
+        <div class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M12 8c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm0-5C6.477 3 2 7.477 2 13s4.477 10 10 10 10-4.477 10-10S17.523 3 12 3z"/></svg>
+            <span class="tooltip">Settings</span>
+        </div>
+    </div>
+</body>
+</html>
