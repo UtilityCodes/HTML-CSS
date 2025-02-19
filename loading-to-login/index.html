@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: black;
+      font-family: Arial, sans-serif;
+    }
+
+    .text {
+      color: white;
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+
+    .loading-bar {
+      width: 300px;
+      height: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      animation: load 3s linear;
+      transform-origin: left;
+    }
+
+    @keyframes load {
+      0% {
+        transform: scaleX(0);
+      }
+      100% {
+        transform: scaleX(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="text">Property One</div>
+  <div class="loading-bar">
+    <div class="progress"></div>
+  </div>
+</body>
+</html>
